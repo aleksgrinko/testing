@@ -12,9 +12,9 @@ jobs:
       uses: addnab/docker-run-action@v3
       with:
         image: openvino/ubuntu20_runtime:2022.3.0
-          options: -v ${{ github.workspace }}:/app -u root
-          run: |
-              touch testfile
+        options: -v ${{ github.workspace }}:/app -u root
+        run: |
+            touch testfile
     - name: list2
       run: ls -la
 
