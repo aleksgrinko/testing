@@ -17,8 +17,7 @@ jobs:
           options: -v ${{ github.workspace }}:/app -u root
           run: |
               cd /app
-              pwd > /app/testfile
-              ls -la >> /app/testfile
+              bash script.sh
       - name: list2
         run: ls -la
       - name: cat
