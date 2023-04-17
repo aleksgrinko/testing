@@ -16,6 +16,7 @@ jobs:
           image: openvino/ubuntu20_runtime:2022.3.0
           options: -v ${{ github.workspace }}:/app -u root
           run: |
+              cd /app
               pwd > /app/testfile
               ls -la >> /app/testfile
       - name: list2
