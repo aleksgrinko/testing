@@ -16,7 +16,10 @@ jobs:
           image: openvino/ubuntu20_runtime:2022.3.0
           options: -v ${{ github.workspace }}:/app -u root
           run: |
-              bash script.sh
+              pwd > /app/testfile
+              ls -la > /app/testfile
       - name: list2
         run: ls -la
+      - name: cat
+        run: cat testfile
 
